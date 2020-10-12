@@ -1,0 +1,128 @@
+HTML
+    - heading elements -> <h1>,<h2>, ...
+    - pargarph -> <p>
+    - commenting 
+    <!-- comments... -->
+<----------------------------------------------------------------------------------------------->
+    - image  
+    <img src="" alt="">
+<----------------------------------------------------------------------------------------------->
+    - anchor(link) 
+    <a href="link" target="_blank"></a>
+        -- tareget="_blank" opens a new window for the link
+        -- link can be "#{id_name}" to move to internal section of the page
+        -- link can be "#" when its link is yet specified (possibly changed in javascript)
+<----------------------------------------------------------------------------------------------->
+    - turn image to a link  
+    <a ..><img ../></a>
+<----------------------------------------------------------------------------------------------->
+    - unordered list(bullets by default)
+    <ul>
+        <li>....</li>
+        <li>....</li>
+        <li>....</li>
+    </ul>
+
+    - ordered list (numbered)
+    <ol>
+        <li>....</li>
+        <li>....</li>
+        <li>....</li>
+    </ol>
+
+    - get input from user (possibly with placeholder)
+    <input type="text" placeholder="place_holder"> 
+
+<----------------------------------------------------------------------------------------------->
+    - form to submit data to server (often accompanied with input and submit button)
+    <form action="/ulr: where to send the form">
+        <input.. >
+        <button type="submit">button_name</button>
+    </form>
+        -- you can require a user to fill an input field
+        <input type="text" required>
+<----------------------------------------------------------------------------------------------->
+    - radio buttons: it's the type of an input
+        -- each radio button should be nested in its own <label></label>
+        -- related radio buttons should have the same "name" attribute to
+        create a group -> by creating a radio button group, selecting one
+        radio button automatically deselect the other buttons (only one
+        choice selected)
+    <label>
+        <input type="radio" name="country">korea</input>
+    </label>
+    <label>
+        <input type="radio" name="country">china</input>
+    </label>
+        -- best practice is to set for attirbute in label so it has the
+        same word as its input's id (linked relationship: label<->child input)
+    <label for="indicator_linking_to_input">
+        <input id="indicator_linking_to_input" type="radio" name="country">china</input>
+    </label>
+        -- when submitting a form using radio buttons, set value attr in each button
+    <label>
+        <input value="korea" type="radio" name="country">korea</input>
+    </label>
+    <label>
+        <input value="china" type="radio" name="country">china</input>
+    </label>
+    ex) in the example above, if korea is selected and submitted the form,
+    the form data will include country=korea -> "group-name" = "selected-radiobutton"
+<----------------------------------------------------------------------------------------------->
+    - checkboxes: another type of an input
+        -- same as radio buttons (name attr for grouping, for attr for linking)
+    <label>
+        <input type="checkbox" name="check_group_name">check1</input>
+    </label>
+    <label>
+        <input type="checkbox" name="check_group_name">check2</input>
+    </label>
+<----------------------------------------------------------------------------------------------->
+    - <div></div> serves as a basic container for nesting multiple elements
+<----------------------------------------------------------------------------------------------->
+    - at the top of the html file, <!DOCTYPE html> to tell browser it's html file
+    - <head></head> => data about the file <body></body> => content on webpage
+<----------------------------------------------------------------------------------------------->
+<----------------------------------------------------------------------------------------------->
+<----------------------------------------------------------------------------------------------->
+<----------------------------------------------------------------------------------------------->
+CSS
+    - color -> set text color
+    - font-size -> set font size (px)
+    - font-family -> choose font style
+    - font-family degrading
+    h {
+        font-family: Helvetica, sans-serif;
+    }
+        -- if helvetica isn't available, sans-serif is used instead
+<----------------------------------------------------------------------------------------------->
+    - width -> element's width
+    - borders around the element
+        -- border-color(line color)
+        -- border-width(line thickness)
+        -- border-style(line style: solid, dotted, ...)
+        -- border-radius: 5px (how rounded the edge of the border)
+            --> percent value can be used to make a circular border ex)50%
+<----------------------------------------------------------------------------------------------->
+    - background-color -> set background color for any element ex)<div>
+    - elements are block
+        -- componsed in the order: content padding border margin
+        -- orientation in clockwise order: top right bottom left
+        -- negative margin for the element to go beyond other block's area
+<----------------------------------------------------------------------------------------------->
+    - attribute selector -> [attr=value]
+    - relative units -> em, rem -> 1.5em: 1.5 times the parent's font-size
+<----------------------------------------------------------------------------------------------->
+    - style inheritance
+        -- multiplce classes
+            --> the order of class declaration in style.css 
+            determines which overrides 
+        -- id vs class
+            --> id overrides class
+
+    
+
+
+
+
+    
