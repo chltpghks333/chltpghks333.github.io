@@ -4,39 +4,65 @@
         <meta charset="utf-8">
         <title>Swan's Portfolio</title>
         <link href="styles/index.css" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="container">
-            <nav>
-                <div class="nav-menu">
-                    <button id="about">About</button>
-                    <button id="education">Education</button>
-                    <button id="projects">Projects</button>
-                    <button id="skills">Skills</button>
-                    <button id="contact">Contact me</button>
-                </div>
-                <div class="sociallinks">
-                    <a href="https://www.facebook.com/">facebook</a>
-                    <a href="https://www.github.com/">github</a>
-                    <a href="https://www.linkedin.com/">linkedIn</a>
-                </div>
+        <div class="wrapper">
+            <!-- side nav bar -->
+            <nav class="side-nav">
+                <ul class="nav-menu">
+                    <li><a href="#about">about me</a></li>
+                    <li><a href="#education">education</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#skills">skills</a></li>
+                    <li><a href="#contact">contact me</a></li>
+                </ul>
+                <ul class="social-links">
+                    <li><a href="#">facebook</a></li>
+                    <li><a href="#">github</a></li>
+                    <li><a href="#">linkedin</a></li>
+                </ul>
             </nav>
-            <main>
-                <section id="about-me">
-                    <img src="" alt="profile picture"/>
-                    <h2>Mike Choi</h2>
-                    <p>hi, i am Mike Choi</p>
+            <!-- main page -->
+            <div class="main">
+                <section id="about">
+                    <div>
+                        img 
+                    </div>
+                    <div>
+                        <h2 class="section-title"> About Me </h2> 
+                    </div>
                 </section>
                 <section id="education">
+                    <h2 class="section-title"> Education </h2>
+                    <ul class="edu-background"> 
+                        <li>School: University of Virginia</li> 
+                        <li>Degree: Bachelor of Science in Computer Science</li> 
+                        <li>GPA: 3.8/4.0</li> 
+                        <li><a href="#" target="_blank">Transcript</a></li> 
+                    </ul>
                 </section>
                 <section id="projects">
+                    <h2 class="section-title"> Projects </h2>
+                    <div class="project-list">
+                        <div>
+                            project 1
+                        </div>
+                        <div>
+                            project 2
+                        </div>
+                        <div>
+                            project 3
+                        </div>
+
+                    </div>
                 </section>
                 <section id="skills">
+                    <h2 class="section-title"> Skills </h2>
                 </section>
-                <section id="contact-me">
+                <section id="contact">
+                    <h2 class="section-title"> Contact Me </h2>
                 </section>
-            </main>
+            </div>
         </div>
     </body>
 </html>

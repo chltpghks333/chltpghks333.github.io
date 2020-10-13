@@ -1,76 +1,70 @@
-html {
-    background-color: #659DBD;
-}
-
 body {
     margin: 0;
+    padding: 0;
 }
-
-.container {
+.wrapper {
     display: grid;
-    grid-template-columns: 1fr 20fr;
-    row-gap: 2px;
-}
-
-nav {
-    grid-column: 1;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    background-color: #DAAD86;
     height: 100vh;
-    padding: 5px;
-    position: fixed;
-}
-.nav-menu #about {
-    grid-row: 1;
-}
-.nav-menu #education {
-    grid-row: 2;
-}
-.nav-menu #projects {
-    grid-row: 3;
-}
-.nav-menu #skills {
-    grid-row: 4;
-}
-.nav-menu #contact {
-    grid-row: 5;
+    grid-template-columns: 1fr 19fr;
 }
 
-.sociallinks {
-    grid-row: 10;
-}
+.side-nav {
+    border: 2px solid black;
+    grid-column: 1;
+    text-align: center;
+    padding: 1rem;
 
-main {
+}
+.main {
+    border: 2px solid black;
     grid-column: 2;
+    text-align: center;
     display: grid;
-    grid-template-rows: repeat(5,1fr);
-    row-gap: 10px;
-    padding: 10px;
 }
-
-#about-me {
-    background-color: #FBEEC1;
-    padding: 10px;
-
+.nav-menu {
+    border: 2px solid black;
+    padding: 0;    
+    list-style-type: none;
+    text-align: start;
+    line-height: 2rem;
 }
+.social-links {
+    border: 2px solid black;
+    padding: 0;    
+    list-style-type: none;
+    text-align: start;
+    line-height: 2rem;
+    position: absolute;
+    bottom: 1rem;
+}
+.section-title {
+    text-decoration: underline;
+    margin-top: 0.25rem;
+}
+.main section {
+    border: 2px dotted blue;
+}
+section div {
+    border: 2px dotted green;
+}
+/*about starts here*/
+#about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/*education starts here*/
 #education {
-    background-color: #FBEEC1;
-    padding: 10px;
+}
+.edu-background {
+    list-style-type: none;
 
 }
+/*project starts here*/
 #projects {
-    background-color: #FBEEC1;
-    padding: 10px;
 
 }
-#skills {
-    background-color: #FBEEC1;
-    padding: 10px;
-
+.project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
-#contact-me {
-    background-color: #FBEEC1;
-    padding: 10px;
 
-}
