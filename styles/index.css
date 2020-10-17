@@ -1,23 +1,18 @@
 /*custom variables for colors*/
-:root {
-    --dominant-color: #000000;
-    --accent-color: #8C8C8C; 
-    --bg-color: #DEDEDE;
-}
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    color: var(--dominant-color);
+    color: white;
 }
 ul {
     list-style-type: none;
     padding: 0;
 }
 body {
-    background: url(https://images.unsplash.com/photo-1469050624972-f03b8678e363?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) 
+    background: url(https://images.unsplash.com/photo-1484950763426-56b5bf172dbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) 
     no-repeat center center fixed; 
     background-size: cover;
     overflow-y: hidden;
@@ -30,13 +25,11 @@ body {
     flex-flow: row nowrap;
     background-color: transparent;
     height: 100vh;
-    border: 2px solid red;
 }
 /*side navigation bar*/
 .navbar {
     flex-basis: 5vw;
     padding: 0.75rem;
-    border: 2px solid black;
 
     display: grid;
     grid-template-rows: repeat(12, 1fr);
@@ -46,6 +39,21 @@ body {
     align-self: start;
     padding-top: 1rem;
 }
+.header-logo li {
+    animation-name: wobble;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards; 
+    position: relative;
+
+}
+@keyframes wobble {
+    0% {color: white;left:0;}
+    25% {color: black;left:1rem;}
+    50% {color: white;left:0;}
+    75% {color: black;left:-1rem;}
+    100% {color: white;left:0; }
+}
 .header-logo p {
     padding-top: 0.5rem;
 }
@@ -54,6 +62,18 @@ body {
 }
 .nav-menu li {
     margin-bottom: 2rem;
+    border-top: 1px solid white;
+    padding: 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    transition: all;
+}
+
+.nav-menu li:hover {
+    background: rgba(255,255,255,0.3);
+}
+.nav-menu a {
+    width: 100%;
+    text-decoration: none;
 }
 .social-links {
     grid-row: 9/13;
@@ -77,12 +97,11 @@ section {
     padding: 2rem;
 }
 .section-title {
-    text-decoration: underline double var(--accent-color); 
+    text-decoration: underline double white; 
     margin-bottom: 2rem;
     font-size: 3rem;
 }
 .content {
-    /*border: 2px dotted white;*/
     font-size: 1.5rem;
 
 }
@@ -104,7 +123,7 @@ section {
     list-style-type: square;
     align-self: center;
     justify-self: center;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.3);
     margin: 1rem;
     border-radius: 1rem;
 }
@@ -137,9 +156,15 @@ section {
     justify-items: center;
 }
 .category h3 {
-    color: var(--accent-color);
+    color: white;
     text-decoration: underline;
     margin-bottom: 1rem;
+}
+.category ul {
+    background: rgba(255,255,255,0.3);
+    border-radius: 1rem;
+    padding: 1rem;
+
 }
 
 /*contact me section*/
